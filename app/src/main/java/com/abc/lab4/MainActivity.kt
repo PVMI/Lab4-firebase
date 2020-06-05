@@ -35,7 +35,14 @@ class MainActivity : AppCompatActivity() {
                 subject_editText.text.toString(),
                 mark_editText.text.toString().toDouble()
         )
+
+        val mark2 = Mark(
+                "Valeria",
+                "Moraga Ibarra",
+                mark_editText.text.toString().toDouble()
+        )
         marksRef.push().setValue(mark)
+        marksRef.push().setValue(mark2)
     }
 
     private fun writeMark(mark: Mark) {
